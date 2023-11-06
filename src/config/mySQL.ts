@@ -18,8 +18,8 @@ const dbConfig: TypeOrmModuleOptions = {
     logger: 'debug',
     charset: 'utf8mb4',
     synchronize: false,
-    entities: [path.join(__dirname, '../..', '/entities/*.entity{.ts,.js}')],
-    migrations: [path.join(__dirname, '../..', '/migration/*{.ts,.js}')],
+    entities: [path.join(__dirname, '../..', 'src/entities/*.entity{.ts,.js}')],
+    migrations: [path.join(__dirname, '../..', 'src/migration/*{.ts,.js}')],
     autoLoadEntities: true,
 };
 export default dbConfig;

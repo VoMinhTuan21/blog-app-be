@@ -7,6 +7,17 @@ const initSwagger = (app: INestApplication) => {
         .setDescription('API for blog app')
         .setVersion('1.0')
         .addTag('blog')
+        .addBearerAuth(
+            {
+                description: `[just text field] Please enter token in following format: Bearer <JWT>`,
+                name: 'Authorization',
+                bearerFormat: 'Bearer',
+                scheme: 'Bearer',
+                type: 'http',
+                in: 'Header',
+            },
+            'token',
+        )
         .build();
     const document = SwaggerModule.createDocument(app, config);
     SwaggerModule.setup('api', app, document);
