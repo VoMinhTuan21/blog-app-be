@@ -7,9 +7,6 @@ class Category extends AbstractEntity {
     @Column({ type: 'varchar', length: 100, nullable: false })
     title: string;
 
-    @Column({ type: 'varchar', length: 255, nullable: false })
-    image: string;
-
     @OneToMany(() => Post, (post) => post.category)
     posts: Post[];
 }

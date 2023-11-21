@@ -7,6 +7,11 @@ import { AuthModule } from './modules/auth/auth.module';
 import dbConfig from './config/mySQL';
 import { ConfigModule } from '@nestjs/config';
 import { FacebookModule } from './modules/facebook/facebook.module';
+import { CategoryModule } from './modules/category/category.module';
+import { CloudinaryModule } from './modules/cloudinary/cloudinary.module';
+import { PostModule } from './modules/post/post.module';
+import { ImageModule } from './modules/image/image.module';
+import { CommentModule } from './modules/comment/comment.module';
 
 @Module({
     imports: [
@@ -19,6 +24,11 @@ import { FacebookModule } from './modules/facebook/facebook.module';
             isGlobal: true,
         }),
         FacebookModule,
+        CategoryModule,
+        CloudinaryModule,
+        PostModule,
+        ImageModule,
+        CommentModule,
     ],
     controllers: [],
     providers: [],

@@ -46,6 +46,7 @@ export class GoogleService {
 
             return data;
         } catch (error) {
+            console.log('error: ', error);
             handleResponseFailure({
                 error: CAN_NOT_GET_GOOGLE_TOKEN,
                 statusCode: HttpStatus.BAD_REQUEST,
